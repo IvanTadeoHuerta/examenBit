@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Examen Servicios REST </h2>
+  <p>La siguiente tabla muestra los resultados de la petición get:</p>
+  <a routerLink="/formulario">Agregar nuevo</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre completo</th>
+        <th>Usuario</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.name }}</td>
+        <td>{{ cliente.user }}</td>
+        <td>{{ cliente.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
