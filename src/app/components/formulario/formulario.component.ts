@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -6,8 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class FormularioComponent implements OnInit {
+  formulario: FormGroup;
 
-  constructor() { }
+  constructor() {
+    this.formulario = new FormGroup({
+      Nombre: new FormControl(),
+      Apellidos: new FormControl(),
+      Nombre_Usuari: new FormControl(),
+      Contraseña: new FormControl(),
+      Correo_Electronic: new FormControl()
+      
+    });
+   }
+
+   enviarFormulario(){
+     console.log(this.formulario)
+   }
 
   ngOnInit() {
   }
