@@ -13,7 +13,7 @@ export class FormularioComponent implements OnInit {
     this.formulario = new FormGroup({
       Nombre: new FormControl(),
       Apellidos: new FormControl(),
-      Nombre_Usuari: new FormControl(),
+      Nombre_Usuario: new FormControl(),
       Contraseña: new FormControl(),
       Correo_Electronic: new FormControl()
       
