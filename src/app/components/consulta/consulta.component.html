@@ -12,9 +12,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let cliente of clientes">
-        <td>{{ cliente.name }}</td>
-        <td>{{ cliente.user }}</td>
-        <td>{{ cliente.email }}</td>
+        <td>{{ cliente.Nombre + ' ' + cliente.Apellidos }}</td>
+        <td>{{ cliente.Nombre_Usuario }}</td>
+        <td>{{ cliente.Correo_Electronico }}</td>
       </tr>
     </tbody>
   </table>
