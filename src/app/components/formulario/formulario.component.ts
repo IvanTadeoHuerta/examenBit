@@ -7,28 +7,26 @@ import { FormGroup, FormControl } from '@angular/forms';
   styles: []
 })
 export class FormularioComponent implements OnInit {
-  formulario: FormGroup;
-
-  constructor() {
-    this.formulario = new FormGroup({
-      Nombre: new FormControl(),
-      Apellidos: new FormControl(),
-      Nombre_Usuario: new FormControl(),
-      Contraseña: new FormControl(),
-      Correo_Electronic: new FormControl()
-      
-    });
-   }
+  
+  
+  private Nombre: String;
+  private Apellidos: String;
+  private Nombre_Usuario: String;
+  private Contrasenia: String;
+  private Correo_Electronico: String;
+  
+  constructor(){}
 
    enviarFormulario(){
-      console.log(this.formulario.controls)
-      let params = {
-        "Nombre": this.formulario.controls.Nombre.value,       
-       "Apellidos": this.formulario.controls.Apellidos.value,       
-        "Nombre_Usuario": this.formulario.controls.Nombre_Usuario.value,        
-        "Correo_Electronico": this.formulario.controls.Correo_Electronico.value,       
-       "Contraseña": this.formulario.controls.Contraseña.value }
      
+       let params = {
+        "Nombre": this.Nombre,       
+        "Apellidos": this.Apellidos,        
+        "Nombre_Usuario": this.Nombre_Usuario,        
+        "Correo_Electronico": this.Correo_Electronico,        
+        "Contraseña": this.Contrasenia};
+
+        alert(JSON.stringify(params))
      
      
    }

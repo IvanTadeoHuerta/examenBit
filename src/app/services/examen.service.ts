@@ -16,7 +16,7 @@ export class ExamenService {
 
 
   postInsert(params){
-    const req = this.http.post('http://192.168.100.2:8091/NutriNET/Cliente', params)
+    const req = this.http.post('http://187.188.122.85:8091/NutriNET/Cliente', params)
       .subscribe(
         res => {
           console.log(res);
