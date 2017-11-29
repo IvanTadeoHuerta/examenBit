@@ -31,7 +31,7 @@ export class ExamenService {
 
 
   private ocurrioUnError(error:any){
-    alert('Error al consultar datos!')
+    alert('Ocurrio un error!')
     console.log("Ocurrio un error", error)
     return Promise.reject(error.message || error)
   }
