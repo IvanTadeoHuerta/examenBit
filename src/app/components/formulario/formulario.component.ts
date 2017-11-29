@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ExamenService } from '../../services/examen.service';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styles: []
+   providers: [ ExamenService ]
 })
 export class FormularioComponent implements OnInit {
   
@@ -15,7 +16,7 @@ export class FormularioComponent implements OnInit {
   private Contrasenia: String;
   private Correo_Electronico: String;
   
-  constructor(){}
+  constructor(private clienteService: ExamenService){}
 
    enviarFormulario(){
      
@@ -26,7 +27,15 @@ export class FormularioComponent implements OnInit {
         "Correo_Electronico": this.Correo_Electronico,        
         "Contraseña": this.Contrasenia};
 
-        alert(JSON.stringify(params))
+       this.clienteService.postInsert(JSON.stringify(params))
+       .then(resp => {
+          
+           let respuesta = JSON.parse(resp.text())
+
+           alert('ID DEL CLIENTE: ' + respuesta[0].Cve_Mensaje)
+       })
+
+      
      
      
    }

@@ -16,16 +16,10 @@ export class ExamenService {
 
 
   postInsert(params){
-    const req = this.http.post('http://187.188.122.85:8091/NutriNET/Cliente', params)
-      .subscribe(
-        res => {
-          console.log(res);
-          alert('agrego correctamente')
-        },
-        err => {
-          console.log("Ocurrio un error");
-        }
-      );
+    return this.http.post('http://187.188.122.85:8091/NutriNET/Cliente', params)
+      .toPromise()
+      .then(res => res)
+      .catch(this.ocurrioUnError)
   }
 
 
