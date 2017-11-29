@@ -1,0 +1,39 @@
+<h2>Ingresa los datos para actualizar</h2>
+  <a routerLink="/">Ver todo</a>
+  <form class="form-horizontal" role="form" (ngSubmit)="enviarFormulario()">
+  <div class="form-group">
+    <label for="Cliente_ID" class="col-sm-2 control-label">ID CLIENTE</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Cliente_ID" name="Cliente_ID"   [(ngModel)]="Cliente_ID" placeholder="nombre" disabled>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Edad" class="col-sm-2 control-label">EDAD</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Edad" name="Edad"  [(ngModel)]="Edad" placeholder="Edad" disabled>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Estatura" class="col-sm-2 control-label">ESTATURA</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Estatura" name="Estatura"  [(ngModel)]="Estatura" placeholder="Estatura">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Peso" class="col-sm-2 control-label">PESO</label>
+    <div class="col-sm-10">
+      <input type="Peso" class="form-control" id="Peso" name="Peso"  [(ngModel)]="Peso" placeholder="Peso">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="GEB" class="col-sm-2 control-label">GEB</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="GEB" name="GEB"  [(ngModel)]="GEB" placeholder="GEB" disabled>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Actualiza</button>
+    </div>
+  </div>
+</form>

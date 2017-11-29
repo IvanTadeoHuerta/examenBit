@@ -22,6 +22,13 @@ export class ExamenService {
       .catch(this.ocurrioUnError)
   }
 
+  putUpdate(idCliente,params){
+    return this.http.put('http://187.188.122.85:8091/NutriNET/Cliente/'+idCliente,params)
+      .toPromise()
+      .then(res => res)
+      .catch(this.ocurrioUnError)
+  }
+
 
   private ocurrioUnError(error:any){
     alert('Error al consultar datos!')

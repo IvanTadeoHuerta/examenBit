@@ -8,9 +8,11 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ConsultaComponent } from './components/consulta/consulta.component';
+import { UpdateComponent } from './components/update/update.component';
 
 const appRoutes: Routes = [
   { path: 'formulario', component: FormularioComponent },
+  { path: 'actualiza', component: UpdateComponent },
   { path: '',      component:  ConsultaComponent },
   {path:'**', pathMatch:'full', redirectTo: ''}
 ];
@@ -19,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     FormularioComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
