@@ -21,7 +21,16 @@ export class FormularioComponent implements OnInit {
    }
 
    enviarFormulario(){
-     console.log(this.formulario)
+      console.log(this.formulario.controls)
+      let params = {
+        "Nombre": this.formulario.controls.Nombre.value,       
+       "Apellidos": this.formulario.controls.Apellidos.value,       
+        "Nombre_Usuario": this.formulario.controls.Nombre_Usuario.value,        
+        "Correo_Electronico": this.formulario.controls.Correo_Electronico.value,       
+       "Contraseña": this.formulario.controls.Contraseña.value }
+     
+     
+     
    }
 
   ngOnInit() {
