@@ -13,7 +13,8 @@ export class ConsultaComponent implements OnInit {
   constructor(private clienteService: ExamenService){
       this.clienteService.getClientes()
                          .then(respuesta =>{
-                           console.log(respuesta);
+                         
+                           console.log(JSON.parse(respuesta.text()));
                          })
   }
 

@@ -8,9 +8,9 @@ export class ExamenService {
   constructor(private http:Http) { }
 
   getClientes(){
-    return this.http.get('http://192.168.100.2:8091/NutriNET/Cliente')
+    return this.http.get('http://187.188.122.85:8091/NutriNET/Cliente')
           .toPromise()
-          .then(response => response.json)
+          .then(response => response)
           .catch(this.ocurrioUnError)
   }
 
